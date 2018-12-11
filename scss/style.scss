@@ -1,0 +1,234 @@
+// Working on a DRYer solution for this issue
+
+// Large Screens
+@media screen and (min-width: 480px) {
+  $button-size: 40px;
+  $button-margin: 5px;
+  $button-border-size: 1px;
+  $calc-height: 400px;
+  $calc-width: $button-size*4 + $button-margin*10;
+  $calc-corner-rounding: 20px;
+  body {
+    background: darkslategray;
+  }
+  .row {
+    clear: both;
+  }
+  #calc {
+    position: relative;
+    width: $calc-width;
+    min-height: $calc-height;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    background: grey;
+    border-radius: $calc-corner-rounding;
+    padding: 5px;
+    border: 2px solid black;
+    box-shadow: 5px 5px black;
+  }
+  #display-area {
+    $main-text-size: 1.5em;
+    position: relative;
+    margin-top: $calc-corner-rounding;
+    margin-bottom: 10px;
+    padding: 5px;
+    background: #efefcc;
+    font-family: "Orbitron", sans-serif;
+    text-align: right;
+    min-height: $main-text-size * 2.5;
+    max-height: $main-text-size * 2.5;
+    border-radius: 5px;
+    border: 1px solid black;
+    #display {
+      font-size: $main-text-size;
+      margin: 0;
+    }
+    #history {
+      font-size: $main-text-size / 2.5;
+      color: grey;
+      text-decoration: italics;
+      position: relative;
+    }
+    #status {
+      color: rgba(0, 0, 0, .5);
+      font-size: 1.5em;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 1;
+    }
+  }
+  #buttons {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    .button {
+      background: linen;
+      font-family: "Orbitron", sans-serif;
+      display: flex;
+      float: left;
+      border: $button-border-size solid black;
+      margin: $button-margin;
+      max-width: $button-size;
+      min-width: $button-size;
+      max-height: $button-size;
+      min-height: $button-size;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 2px 2px black;
+      &:active {
+        transform: translate(2px, 2px);
+        box-shadow: inset 1px 1px black;
+      }
+      &:hover {
+        background: white;
+      }
+    }
+    /* Styles for Specific Buttons */
+    [data-type="operator"] {
+      background: peachpuff;
+      font-size: 1.8em;
+    }
+    [value="="] {
+      background: darkgreen;
+    }
+    [data-type="reset"],
+    [data-type="clear"] {
+      background: darkred;
+      min-height: $button-size/2;
+      max-height: $button-size/2;
+      font-size: .5em;
+      color: white;
+      float: right;
+      &:hover {
+        color: black;
+      }
+    }
+    .active-operator {
+      border: $button-border-size solid lime;
+    }
+  }
+}
+
+// Small Screens
+@media screen and (max-width: 479px) {
+  $button-size: 20px;
+  $button-margin: 5px;
+  $button-border-size: 1px;
+  $calc-height: 300px;
+  $calc-width: $button-size*4 + $button-margin*10;
+  $calc-corner-rounding: 20px;
+  body {
+    background: darkslategray;
+  }
+  .row {
+    clear: both;
+  }
+  #calc {
+    position: relative;
+    width: $calc-width;
+    min-height: $calc-height;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    background: grey;
+    border-radius: $calc-corner-rounding;
+    padding: 5px;
+    border: 2px solid black;
+    box-shadow: 5px 5px black;
+  }
+  #display-area {
+    $main-text-size: 1.3em;
+    position: relative;
+    margin-top: $calc-corner-rounding;
+    margin-bottom: 10px;
+    padding: 5px;
+    background: #efefcc;
+    font-family: "Orbitron", sans-serif;
+    text-align: right;
+    min-height: $main-text-size * 2.5;
+    max-height: $main-text-size * 2.5;
+    border-radius: 5px;
+    border: 1px solid black;
+    #display {
+      font-size: $main-text-size;
+      margin: 0;
+    }
+    #history {
+      font-size: $main-text-size / 2.5;
+      color: grey;
+      text-decoration: italics;
+      position: relative;
+    }
+    #status {
+      color: rgba(0, 0, 0, .5);
+      font-size: 1.5em;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 1;
+    }
+  }
+  #buttons {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    .button {
+      background: linen;
+      font-family: "Orbitron", sans-serif;
+      display: flex;
+      float: left;
+      border: $button-border-size solid black;
+      margin: $button-margin;
+      max-width: $button-size;
+      min-width: $button-size;
+      max-height: $button-size;
+      min-height: $button-size;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 2px 2px black;
+      &:active {
+        transform: translate(2px, 2px);
+        box-shadow: inset 1px 1px black;
+      }
+      &:hover {
+        background: white;
+      }
+    }
+    /* Styles for Specific Buttons */
+    [data-type="operator"] {
+      background: peachpuff;
+      font-size: 1.8em;
+    }
+    [value="="] {
+      background: darkgreen;
+    }
+    [data-type="reset"],
+    [data-type="clear"] {
+      background: darkred;
+      min-height: $button-size/2;
+      max-height: $button-size/2;
+      font-size: .5em;
+      color: white;
+      float: right;
+      &:hover {
+        color: black;
+      }
+    }
+    .active-operator {
+      border: $button-border-size solid lime;
+    }
+  }
+
+}

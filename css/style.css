@@ -1,0 +1,226 @@
+@media screen and (min-width: 480px) {
+  body {
+    background: darkslategray;
+  }
+
+  .row {
+    clear: both;
+  }
+
+  #calc {
+    position: relative;
+    width: 210px;
+    min-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    background: grey;
+    border-radius: 20px;
+    padding: 5px;
+    border: 2px solid black;
+    box-shadow: 5px 5px black;
+  }
+
+  #display-area {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background: #efefcc;
+    font-family: "Orbitron", sans-serif;
+    text-align: right;
+    min-height: 3.75em;
+    max-height: 3.75em;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+  #display-area #display {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  #display-area #history {
+    font-size: 0.6em;
+    color: grey;
+    -webkit-text-decoration: italics;
+            text-decoration: italics;
+    position: relative;
+  }
+  #display-area #status {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+  }
+
+  #buttons {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    /* Styles for Specific Buttons */
+  }
+  #buttons .button {
+    background: linen;
+    font-family: "Orbitron", sans-serif;
+    display: flex;
+    float: left;
+    border: 1px solid black;
+    margin: 5px;
+    max-width: 40px;
+    min-width: 40px;
+    max-height: 40px;
+    min-height: 40px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px black;
+  }
+  #buttons .button:active {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+    box-shadow: inset 1px 1px black;
+  }
+  #buttons .button:hover {
+    background: white;
+  }
+  #buttons [data-type="operator"] {
+    background: peachpuff;
+    font-size: 1.8em;
+  }
+  #buttons [value="="] {
+    background: darkgreen;
+  }
+  #buttons [data-type="reset"],
+  #buttons [data-type="clear"] {
+    background: darkred;
+    min-height: 20px;
+    max-height: 20px;
+    font-size: .5em;
+    color: white;
+    float: right;
+  }
+  #buttons [data-type="reset"]:hover,
+  #buttons [data-type="clear"]:hover {
+    color: black;
+  }
+  #buttons .active-operator {
+    border: 1px solid lime;
+  }
+}
+@media screen and (max-width: 479px) {
+  body {
+    background: darkslategray;
+  }
+
+  .row {
+    clear: both;
+  }
+
+  #calc {
+    position: relative;
+    width: 130px;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    background: grey;
+    border-radius: 20px;
+    padding: 5px;
+    border: 2px solid black;
+    box-shadow: 5px 5px black;
+  }
+
+  #display-area {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background: #efefcc;
+    font-family: "Orbitron", sans-serif;
+    text-align: right;
+    min-height: 3.25em;
+    max-height: 3.25em;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+  #display-area #display {
+    font-size: 1.3em;
+    margin: 0;
+  }
+  #display-area #history {
+    font-size: 0.52em;
+    color: grey;
+    -webkit-text-decoration: italics;
+            text-decoration: italics;
+    position: relative;
+  }
+  #display-area #status {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+  }
+
+  #buttons {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    /* Styles for Specific Buttons */
+  }
+  #buttons .button {
+    background: linen;
+    font-family: "Orbitron", sans-serif;
+    display: flex;
+    float: left;
+    border: 1px solid black;
+    margin: 5px;
+    max-width: 20px;
+    min-width: 20px;
+    max-height: 20px;
+    min-height: 20px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px black;
+  }
+  #buttons .button:active {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+    box-shadow: inset 1px 1px black;
+  }
+  #buttons .button:hover {
+    background: white;
+  }
+  #buttons [data-type="operator"] {
+    background: peachpuff;
+    font-size: 1.8em;
+  }
+  #buttons [value="="] {
+    background: darkgreen;
+  }
+  #buttons [data-type="reset"],
+  #buttons [data-type="clear"] {
+    background: darkred;
+    min-height: 10px;
+    max-height: 10px;
+    font-size: .5em;
+    color: white;
+    float: right;
+  }
+  #buttons [data-type="reset"]:hover,
+  #buttons [data-type="clear"]:hover {
+    color: black;
+  }
+  #buttons .active-operator {
+    border: 1px solid lime;
+  }
+}

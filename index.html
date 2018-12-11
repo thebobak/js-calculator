@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>JS Calculator</title>
+  <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div id="calc">
+  <div id="display-area">
+    <span id="status"></span>
+    <p id="display">Welcome</p>
+    <p id="history"></p>
+  </div>
+  <div id="buttons">
+ 
+      <div class="row">
+        <a class="button" value="C" data-type="reset">C</a>
+        <!--<a class="button" value="CE" data-type="clear">CE</a>-->
+      </div>
+      <div class="row">
+        <a class="button" value="1" data-type="digit">1</a>
+        <a class="button" value="2" data-type="digit">2</a>
+        <a class="button" value="3" data-type="digit">3</a>
+        <a class="button" value="+" data-type="operator">+</a>
+      </div>
+      <div class="row">
+        <a class="button" value="4" data-type="digit">4</a>
+        <a class="button" value="5" data-type="digit">5</a>
+        <a class="button" value="6" data-type="digit">6</a>
+        <a class="button" value="-" data-type="operator">-</a>
+      </div>
+      <div class="row">
+        <a class="button" value="7" data-type="digit">7</a>
+        <a class="button" value="8" data-type="digit">8</a>
+        <a class="button" value="9" data-type="digit">9</a>
+        <a class="button" value="*" data-type="operator">&#215;</a>
+      </div>
+      <div class="row">
+        <a class="button" value="0" data-type="digit">0</a>
+        <a class="button" value="." data-type="point">.</a>
+        <a class="button" value="=" data-type="calculate">=</a>
+        <a class="button" value="/" data-type="operator">&#247;</a>
+      </div>
+    </div>
+</div>
+<div id="debug" style="position:absolute; top:10px; left:10px; min-width:100px; max-width:100px; background:rgba(255,255,255,.3);">
+
+
+</div>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
